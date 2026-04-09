@@ -1,5 +1,4 @@
 ﻿using DocumentNumber.Portugal.Nif.Generator;
-using System;
 using System.Collections.Generic;
 
 namespace Portugal.Nif.Validator
@@ -9,30 +8,15 @@ namespace Portugal.Nif.Validator
     ///<inheritdoc/>
     public bool Validate(string value)
     {
-      if (value is null)
-      {
-        return false;
-      }
-
-      if (value.Trim().Length != 9)
-      {
-        return false;
-      }
-
       long valueAsInt = 0;
 
-      if (!Int64.TryParse(value, out valueAsInt))
-      {
+      if (value is null || value.Trim().Length != 9)
         return false;
-      }
-
-      var hasValidScopeId = HasValidScopeId(value.Trim());
-
+      if (!long.TryParse(value, out valueAsInt))
+        return false;
+      bool hasValidScopeId = HasValidScopeId(value.Trim());
       if (hasValidScopeId)
-      {
         return ValidateNif(valueAsInt);
-      }
-
       return false;
     }
 
@@ -47,26 +31,19 @@ namespace Portugal.Nif.Validator
 
     private bool HasValidScopeId(string nif)
     {
-      var SingleCharacterScopeId = new List<string> { "1", "2", "3", "5", "6", "8" };
+      var SingleCharacterScopeId = new List<string> { "1", "2", "3", "5", "6", "8", "9" }; //Digit 9 for condominium assets.
       var DoubleCharacterScopeId = new List<string> { "45", "70", "74", "75", "71", "72", "77", "78", "79", "90", "91", "98", "99" };
       var firstOneCharacter = nif.Substring(0, 1);
       var firstTwoCharacter = nif.Substring(0, 2);
+      bool firstOneCharFound = false;
+      bool firstTwoCharFound = false;
 
-      foreach (var c in SingleCharacterScopeId)
-      {
-        if (c.Equals(firstOneCharacter))
-        {
-          return true;
-        }
-      }
-      foreach (var c in DoubleCharacterScopeId)
-      {
-        if (c.Equals(firstTwoCharacter))
-        {
-          return true;
-        }
-      }
-      return false;
+      firstOneCharFound = SingleCharacterScopeId.Exists(ch=>ch.Equals(firstOneCharacter));
+      firstTwoCharFound = DoubleCharacterScopeId.Exists(ch => ch.Equals(firstTwoCharacter));
+      if(firstOneCharFound || firstTwoCharFound)
+        return true;
+      else
+        return false;
     }
   }
 }

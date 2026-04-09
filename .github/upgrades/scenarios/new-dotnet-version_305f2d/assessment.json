@@ -1,0 +1,1962 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-04-09T13:52:58.7933563Z",
+  "analysisEndTime": "2026-04-09T13:53:02.6135098Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 46,
+      "issues": 1,
+      "incidents": 22,
+      "effort": 22
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 22,
+        "Optional": 0,
+        "Potential": 0,
+        "Information": 0
+      },
+      "category": {
+        "Project": 22
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\DocumentNumber.InternationalBankAccountNumber.Validator\\DocumentNumber.InternationalBankAccountNumber.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.InternationalBankAccountNumber.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 152,
+        "linesOfCode": 152,
+        "totalApiScanned": 88,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.InternationalBankAccountNumber.Validator.Tests\\DocumentNumber.InternationalBankAccountNumber.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.InternationalBankAccountNumber.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1749,
+        "linesOfCode": 73,
+        "totalApiScanned": 59,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "fee65d93-a701-44fc-b420-a023d5e98309",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.InternationalBankAccountNumber.Validator.Tests\\DocumentNumber.InternationalBankAccountNumber.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.InternationalBankAccountNumber.Validator.Tests\\DocumentNumber.InternationalBankAccountNumber.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests\\DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1808,
+        "linesOfCode": 132,
+        "totalApiScanned": 106,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "93192e1c-9d98-49eb-ae45-3abbb24b6b3b",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests\\DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests\\DocumentNumber.PaymentCardNumber.AmericaExpress.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.AmericanExpress.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 13,
+        "linesOfCode": 13,
+        "totalApiScanned": 4,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1736,
+        "linesOfCode": 60,
+        "totalApiScanned": 39,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "c89c36ce-fffb-42bb-b44d-874d19bc6586",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests\\DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.AmericanExpress.Validator\\DocumentNumber.PaymentCardNumber.AmericanExpress.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.AmericanExpress.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 68,
+        "linesOfCode": 68,
+        "totalApiScanned": 28,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.Common\\DocumentNumber.PaymentCardNumber.Common.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Common",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 8,
+        "numberOfCodeFiles": 8,
+        "linesTotal": 134,
+        "linesOfCode": 134,
+        "totalApiScanned": 65,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.Common.Tests\\DocumentNumber.PaymentCardNumber.Common.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Common.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1710,
+        "linesOfCode": 34,
+        "totalApiScanned": 29,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "1368189d-4280-4ee3-921c-f298baf74c26",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.Common.Tests\\DocumentNumber.PaymentCardNumber.Common.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.Common.Tests\\DocumentNumber.PaymentCardNumber.Common.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.Generator.Common\\DocumentNumber.PaymentCardNumber.Generator.Common.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Generator.Common",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 72,
+        "linesOfCode": 72,
+        "totalApiScanned": 44,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.Maestro.Generator\\DocumentNumber.PaymentCardNumber.Maestro.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Maestro.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 13,
+        "linesOfCode": 13,
+        "totalApiScanned": 4,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests\\DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1741,
+        "linesOfCode": 65,
+        "totalApiScanned": 60,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "e3458ac9-04df-487c-9294-15327427cd0d",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests\\DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests\\DocumentNumber.PaymentCardNumber.Maestro.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.Maestro.Validator\\DocumentNumber.PaymentCardNumber.Maestro.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Maestro.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 76,
+        "linesOfCode": 76,
+        "totalApiScanned": 43,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests\\DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1839,
+        "linesOfCode": 163,
+        "totalApiScanned": 156,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "76a34df3-5a8b-4709-8df8-7d059d871a43",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests\\DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests\\DocumentNumber.PaymentCardNumber.Maestro.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.MaestroUK.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 13,
+        "linesOfCode": 13,
+        "totalApiScanned": 4,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1736,
+        "linesOfCode": 60,
+        "totalApiScanned": 47,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "a6f4a919-253a-430b-9e2e-89e8f6e3ce61",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.MaestroUK.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 79,
+        "linesOfCode": 79,
+        "totalApiScanned": 40,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1830,
+        "linesOfCode": 154,
+        "totalApiScanned": 120,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "52fc5769-a77b-4515-adb9-5f491d43893e",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests\\DocumentNumber.PaymentCardNumber.MaestroUK.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.Mastercard.Generator\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Mastercard.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 33,
+        "linesOfCode": 33,
+        "totalApiScanned": 14,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1741,
+        "linesOfCode": 65,
+        "totalApiScanned": 56,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "8f212a45-f998-4bb3-b4dc-eaddeaf6e064",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests\\DocumentNumber.PaymentCardNumber.Mastercard.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.Mastercard.Validator\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Mastercard.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 78,
+        "linesOfCode": 78,
+        "totalApiScanned": 36,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1839,
+        "linesOfCode": 163,
+        "totalApiScanned": 136,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "20384b40-acee-4b7d-a44e-2acce848a7b9",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests\\DocumentNumber.PaymentCardNumber.Mastercard.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.VISA.Generator\\DocumentNumber.PaymentCardNumber.VISA.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISA.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 13,
+        "linesOfCode": 13,
+        "totalApiScanned": 4,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.VISA.Generator.Tests\\DocumentNumber.PaymentCardNumber.VISA.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISA.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1734,
+        "linesOfCode": 58,
+        "totalApiScanned": 43,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "df390947-4a10-45c1-b0fa-37570756443b",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.VISA.Generator.Tests\\DocumentNumber.PaymentCardNumber.VISA.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.VISA.Generator.Tests\\DocumentNumber.PaymentCardNumber.VISA.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.VISA.Validator\\DocumentNumber.PaymentCardNumber.VISA.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISA.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 49,
+        "linesOfCode": 49,
+        "totalApiScanned": 23,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.VISA.Validator.Tests\\DocumentNumber.PaymentCardNumber.VISA.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISA.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1871,
+        "linesOfCode": 195,
+        "totalApiScanned": 162,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "f5ce04e6-7277-40dd-8fc6-8ba4d0bd0b4f",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.VISA.Validator.Tests\\DocumentNumber.PaymentCardNumber.VISA.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.VISA.Validator.Tests\\DocumentNumber.PaymentCardNumber.VISA.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISAElectron.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 13,
+        "linesOfCode": 13,
+        "totalApiScanned": 4,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1743,
+        "linesOfCode": 67,
+        "totalApiScanned": 64,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "f4263a07-1758-4769-8708-f65ccc490cad",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISAElectron.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 70,
+        "linesOfCode": 70,
+        "totalApiScanned": 28,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1838,
+        "linesOfCode": 162,
+        "totalApiScanned": 124,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "174190c0-b554-4e7e-9ae6-82e199a096f7",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests\\DocumentNumber.PaymentCardNumber.VISAElectron.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.BankAccountNumber.Generator\\DocumentNumber.Portugal.BankAccountNumber.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.BankAccountNumber.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 48,
+        "linesOfCode": 48,
+        "totalApiScanned": 21,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.Portugal.BankAccountNumber.Generator.Tests\\DocumentNumber.Portugal.BankAccountNumber.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.BankAccountNumber.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1731,
+        "linesOfCode": 55,
+        "totalApiScanned": 36,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "cd93d7d4-72f9-4b90-b2f8-a8757face3c7",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.Portugal.BankAccountNumber.Generator.Tests\\DocumentNumber.Portugal.BankAccountNumber.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.Portugal.BankAccountNumber.Generator.Tests\\DocumentNumber.Portugal.BankAccountNumber.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.BankAccountNumber.Validator\\DocumentNumber.Portugal.BankAccountNumber.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.BankAccountNumber.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 41,
+        "linesOfCode": 41,
+        "totalApiScanned": 21,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.Portugal.BankAccountNumber.Validator.Tests\\DocumentNumber.Portugal.BankAccountNumber.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.BankAccountNumber.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1773,
+        "linesOfCode": 97,
+        "totalApiScanned": 77,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "0e30a80e-d4b3-43a3-97ce-81d4040501e7",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.Portugal.BankAccountNumber.Validator.Tests\\DocumentNumber.Portugal.BankAccountNumber.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.Portugal.BankAccountNumber.Validator.Tests\\DocumentNumber.Portugal.BankAccountNumber.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.CitizenCard.Generator\\DocumentNumber.Portugal.CitizenCard.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.CitizenCard.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 103,
+        "linesOfCode": 103,
+        "totalApiScanned": 41,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.Portugal.CitizenCard.Validator.Tests\\DocumentNumber.Portugal.CitizenCard.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.CitizenCard.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1700,
+        "linesOfCode": 24,
+        "totalApiScanned": 11,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "c13650da-3681-4ade-ac25-772a1efaed1d",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.Portugal.CitizenCard.Validator.Tests\\DocumentNumber.Portugal.CitizenCard.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.Portugal.CitizenCard.Validator.Tests\\DocumentNumber.Portugal.CitizenCard.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.CitizenCard.Validator\\DocumentNumber.Portugal.CitizenCard.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.CitizenCard.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 71,
+        "linesOfCode": 71,
+        "totalApiScanned": 41,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.Nif.Generator\\DocumentNumber.Portugal.Nif.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.Nif.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 80,
+        "linesOfCode": 80,
+        "totalApiScanned": 28,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.Portugal.Nif.Generator.Tests\\DocumentNumber.Portugal.Nif.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.Nif.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1751,
+        "linesOfCode": 75,
+        "totalApiScanned": 76,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "998e39eb-6c10-4888-b014-679e1b60a0c1",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.Portugal.Nif.Generator.Tests\\DocumentNumber.Portugal.Nif.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.Portugal.Nif.Generator.Tests\\DocumentNumber.Portugal.Nif.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.Nif.Validator\\DocumentNumber.Portugal.Nif.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.Nif.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 80,
+        "linesOfCode": 80,
+        "totalApiScanned": 68,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.Niss.Generator\\DocumentNumber.Portugal.Niss.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.Niss.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 54,
+        "linesOfCode": 54,
+        "totalApiScanned": 15,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\DocumentNumber.Portugal.Niss.Generator.Tests\\DocumentNumber.Portugal.Niss.Generator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.Niss.Generator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1717,
+        "linesOfCode": 41,
+        "totalApiScanned": 33,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "ec0da34b-4d68-47cb-89aa-515bb0d5b19b",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DocumentNumber.Portugal.Niss.Generator.Tests\\DocumentNumber.Portugal.Niss.Generator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DocumentNumber.Portugal.Niss.Generator.Tests\\DocumentNumber.Portugal.Niss.Generator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.Portugal.Niss.Validator\\DocumentNumber.Portugal.Niss.Validator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.Portugal.Niss.Validator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 43,
+        "linesOfCode": 43,
+        "totalApiScanned": 13,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "src\\DocumentNumber.ValidatorAbstractions\\DocumentNumber.ValidatorAbstractions.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DocumentNumber.ValidatorAbstractions",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 12,
+        "linesOfCode": 12,
+        "totalApiScanned": 2,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "tests\\Portugal.CitizenCard.Validator.Tests\\Portugal.CitizenCard.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "Portugal.CitizenCard.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1766,
+        "linesOfCode": 90,
+        "totalApiScanned": 70,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "bc6d4fc6-4cea-4462-8029-a8dd05e17824",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\Portugal.CitizenCard.Validator.Tests\\Portugal.CitizenCard.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\Portugal.CitizenCard.Validator.Tests\\Portugal.CitizenCard.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests\\Portugal.Nif.Validator.Tests\\Portugal.Nif.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "Portugal.Nif.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1878,
+        "linesOfCode": 202,
+        "totalApiScanned": 195,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "7e290e81-767b-4a03-93bc-1424b8154bac",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\Portugal.Nif.Validator.Tests\\Portugal.Nif.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\Portugal.Nif.Validator.Tests\\Portugal.Nif.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests\\Portugal.Niss.Validator.Tests\\Portugal.Niss.Validator.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "Portugal.Niss.Validator.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0",
+          "net7.0",
+          "net462",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1743,
+        "linesOfCode": 67,
+        "totalApiScanned": 45,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "d541792e-05b9-4fed-9a2f-c48f26de7c7c",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\Portugal.Niss.Validator.Tests\\Portugal.Niss.Validator.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+              "protected": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\Portugal.Niss.Validator.Tests\\Portugal.Niss.Validator.Tests.csproj",
+            "snippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "protectedSnippet": "Current target framework: net6.0;net7.0;net462;net472;net48;net481\nRecommended target framework: net6.0;net7.0;net462;net472;net48;net481;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0;net7.0;net462;net472;net48;net481",
+              "RecommendedTargetFramework": "net6.0;net7.0;net462;net472;net48;net481;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
