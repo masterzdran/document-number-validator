@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11626.88 stable
+VisualStudioVersion = 18.4.11626.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentNumber.Portugal.Nif.Validator", "src\DocumentNumber.Portugal.Nif.Validator\DocumentNumber.Portugal.Nif.Validator.csproj", "{4E16F536-C39A-4009-9B2E-7AB99B3A4FA2}"
 EndProject
@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		.github\workflows\build-deploy-nugets.yml = .github\workflows\build-deploy-nugets.yml
 		CHANGELOG.md = CHANGELOG.md
 		Directory.Build.props = Directory.Build.props
 		global.json = global.json
@@ -145,7 +146,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.Spain.Vat.Va
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.France.Vat.Validator", "src\DocumentNumber.France.Vat.Validator\DocumentNumber.France.Vat.Validator.csproj", "{4FE7A996-83B4-43EB-9FD5-1DBC16623688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.France.Vat.Validator", "tests\DocumentNumber.France.Vat.Validator\DocumentNumber.France.Vat.Validator.csproj", "{ECBC6992-3B18-4C4B-A33D-0FF61888F7DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.France.Vat.Validator.Tests", "tests\DocumentNumber.France.Vat.Validator.Tests\DocumentNumber.France.Vat.Validator.Tests.csproj", "{ECBC6992-3B18-4C4B-A33D-0FF61888F7DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.Brazil.Vat.Generator.Tests", "tests\DocumentNumber.Brazil.Vat.Generator.Tests\DocumentNumber.Brazil.Vat.Generator.Tests.csproj", "{14FCE545-6971-45E6-89AD-0573744BFD0A}"
 EndProject

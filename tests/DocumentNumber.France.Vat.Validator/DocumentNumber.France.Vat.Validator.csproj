@@ -1,6 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\DocumentNumber.France.Vat.Generator\DocumentNumber.France.Vat.Generator.csproj" />
-		<ProjectReference Include="..\..\src\DocumentNumber.France.Vat.Validator\DocumentNumber.France.Vat.Validator.csproj" />
-	</ItemGroup>
-</Project>
