@@ -4,110 +4,47 @@ on:
   push:    
     branches: 
       - 'release/all/**'
+
 env:
   CONFIGURATION: 'Release'
+  DOTNET_VERSION: '10.x'
+
 jobs:
-  build_and_test:
-    runs-on: windows-2022
+  build_test_and_pack:
+    runs-on: windows-latest
 
     steps:
       - name: Checkout.
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup .NET.
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 7.x
+          dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Restore packages.
         run: dotnet restore Document.Validator.sln
       - name: Build Solution
-        run: dotnet build Document.Validator.sln --no-restore
+        run: dotnet build Document.Validator.sln --no-restore -c ${{ env.CONFIGURATION }}
       - name: Run unit tests.
-        run: dotnet test  --verbosity normal  Document.Validator.sln --no-restore
-
-  packing:
-    needs: build_and_test
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout.
-        uses: actions/checkout@v3
-              
-      - name: Setup .NET.
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 7.x
-      - name: Pack Document.Validator.sln
-        run: dotnet pack  --output ./dist/
-
-
-          # Packing the Libraries
-      # - name: Pack DocumentNumber.PaymentCardNumber.Generator.Common
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Generator.Common/DocumentNumber.PaymentCardNumber.Generator.Common.csproj
-      # - name: Pack DocumentNumber.ValidatorAbstractions
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.ValidatorAbstractions/DocumentNumber.ValidatorAbstractions.csproj
-      # - name: Pack DocumentNumber.Portugal.BankAccountNumber.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.BankAccountNumber.Generator/DocumentNumber.Portugal.BankAccountNumber.Generator.csproj
-      # - name: Pack DocumentNumber.Portugal.CitizenCard.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.CitizenCard.Generator/DocumentNumber.Portugal.CitizenCard.Generator.csproj
-      # - name: Pack DocumentNumber.Portugal.Nif.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.Nif.Generator/DocumentNumber.Portugal.Nif.Generator.csproj
-      # - name: Pack DocumentNumber.Portugal.Niss.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.Niss.Generator/DocumentNumber.Portugal.Niss.Generator.csproj
-
-      # Packing the Libaries  
-      # - name: Pack DocumentNumber.PaymentCardNumber.AmericanExpress.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.AmericanExpress.Generator/DocumentNumber.PaymentCardNumber.AmericanExpress.Generator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.Maestro.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Maestro.Generator/DocumentNumber.PaymentCardNumber.Maestro.Generator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.MaestroUK.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.MaestroUK.Generator/DocumentNumber.PaymentCardNumber.MaestroUK.Generator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.Mastercard.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Mastercard.Generator/DocumentNumber.PaymentCardNumber.Mastercard.Generator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.VISA.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISA.Generator/DocumentNumber.PaymentCardNumber.VISA.Generator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.VISAElectron.Generator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISAElectron.Generator/DocumentNumber.PaymentCardNumber.VISAElectron.Generator.csproj
-      # - name: Pack DocumentNumber.InternationalBankAccountNumber.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.InternationalBankAccountNumber.Validator/DocumentNumber.InternationalBankAccountNumber.Validator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.Common
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Common/DocumentNumber.PaymentCardNumber.Common.csproj
-      # - name: Pack DocumentNumber.Portugal.CitizenCard.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.CitizenCard.Validator/DocumentNumber.Portugal.CitizenCard.Validator.csproj
-      # - name: Pack DocumentNumber.Portugal.Nif.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.Nif.Validator/DocumentNumber.Portugal.Nif.Validator.csproj
-      # - name: Pack DocumentNumber.Portugal.Niss.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.Niss.Validator/DocumentNumber.Portugal.Niss.Validator.csproj      
-      
-      # Packing the Libaries  
-      # - name: Pack DocumentNumber.PaymentCardNumber.AmericanExpress.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.AmericanExpress.Validator/DocumentNumber.PaymentCardNumber.AmericanExpress.Validator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.Maestro.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Maestro.Validator/DocumentNumber.PaymentCardNumber.Maestro.Validator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.MaestroUK.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.MaestroUK.Validator/DocumentNumber.PaymentCardNumber.MaestroUK.Validator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.Mastercard.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.Mastercard.Validator/DocumentNumber.PaymentCardNumber.Mastercard.Validator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.VISA.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISA.Validator/DocumentNumber.PaymentCardNumber.VISA.Validator.csproj
-      # - name: Pack DocumentNumber.PaymentCardNumber.VISAElectron.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.PaymentCardNumber.VISAElectron.Validator/DocumentNumber.PaymentCardNumber.VISAElectron.Validator.csproj
-      # - name: Pack DocumentNumber.Portugal.BankAccountNumber.Validator
-      #   run: dotnet pack --no-build --no-restore --output ./dist/ ./src/DocumentNumber.Portugal.BankAccountNumber.Validator/DocumentNumber.Portugal.BankAccountNumber.Validator.csproj      
+        run: dotnet test Document.Validator.sln --no-restore -c ${{ env.CONFIGURATION }} --verbosity normal
+      - name: Pack NuGet packages
+        run: dotnet pack Document.Validator.sln --no-build -c ${{ env.CONFIGURATION }} --output ./dist/
       - name: Upload nuget packages
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v4
         with:
+          name: nuget-packages
           path: './dist'
 
   publish_nuget_org:
-    needs: packing
+    needs: build_test_and_pack
     runs-on: ubuntu-latest
     environment:
       name: NUGET_ORG
       url: 'https://www.nuget.org/profiles/masterzdran'
     steps:
       - name: Download nuget packages
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
+          name: nuget-packages
           path: './dist'
       - name: Publish nuget.org
-        run: dotnet nuget push dist/artifact/*.nupkg --api-key ${{secrets.NUGET_ORG_TOKEN}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push dist/*.nupkg --api-key ${{secrets.NUGET_ORG_TOKEN}} --source https://api.nuget.org/v3/index.json
