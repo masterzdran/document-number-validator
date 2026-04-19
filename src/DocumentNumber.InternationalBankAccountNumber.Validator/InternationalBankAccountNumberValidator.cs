@@ -3,142 +3,142 @@ using System.Text.RegularExpressions;
 
 namespace DocumentNumber.InternationalBankAccountNumber.Validator
 {
-  public class InternationalBankAccountNumberValidator : IInternationalBankAccountNumberValidator
-  {
-    protected static readonly Regex SanitizeRegEx = new Regex("[^A-Z0-9]+");
-    protected static readonly Regex IBANStructure = new Regex("^([A-Z]{2}[0-9]{2})([A-Z0-9]+)");
-    protected static readonly Regex AlphaCharacters = new Regex("([A-Z])");
-
-    public bool Validate(string value)
+    public class InternationalBankAccountNumberValidator : IInternationalBankAccountNumberValidator
     {
-      if(String.IsNullOrEmpty(value))
-      {
-        return false;
-      }
+        protected static readonly Regex SanitizeRegEx = new Regex("[^A-Z0-9]+");
+        protected static readonly Regex IBANStructure = new Regex("^([A-Z]{2}[0-9]{2})([A-Z0-9]+)");
+        protected static readonly Regex AlphaCharacters = new Regex("([A-Z])");
 
-      var sanitizedValue = Sanitize(value);
-      if(!IsValid(sanitizedValue))
-      {
-        return ValidateNonIBAN(sanitizedValue);
-      }
+        public bool Validate(string value)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                return false;
+            }
 
-      var ibanMatch = IBANStructure.Match(sanitizedValue);
-      if(!ibanMatch.Success)
-      {
-        return ValidateNonIBAN(sanitizedValue);
-      }
+            var sanitizedValue = Sanitize(value);
+            if (!IsValid(sanitizedValue))
+            {
+                return ValidateNonIBAN(sanitizedValue);
+            }
 
-      var countryPart = ibanMatch.Groups[1].Value;
-      if (!ValidateCountry(countryPart))
-      {
-        return false;
-      }
+            var ibanMatch = IBANStructure.Match(sanitizedValue);
+            if (!ibanMatch.Success)
+            {
+                return ValidateNonIBAN(sanitizedValue);
+            }
 
-      var domesticAccountNumber = ibanMatch.Groups[2].Value;
-      var replacedDomestic = AlphaCharacters.Replace(domesticAccountNumber, EvaluateAlphaReplace);
-      if (!ValidateDomesticAccountNumber(replacedDomestic))
-      {
-        return false;
-      }
+            var countryPart = ibanMatch.Groups[1].Value;
+            if (!ValidateCountry(countryPart))
+            {
+                return false;
+            }
 
-      var replacedCountry = AlphaCharacters.Replace(countryPart, EvaluateAlphaReplace);
-      var fullCheckString = replacedDomestic + replacedCountry;
+            var domesticAccountNumber = ibanMatch.Groups[2].Value;
+            var replacedDomestic = AlphaCharacters.Replace(domesticAccountNumber, EvaluateAlphaReplace);
+            if (!ValidateDomesticAccountNumber(replacedDomestic))
+            {
+                return false;
+            }
 
-      return ValidateIntegrity(fullCheckString);
+            var replacedCountry = AlphaCharacters.Replace(countryPart, EvaluateAlphaReplace);
+            var fullCheckString = replacedDomestic + replacedCountry;
+
+            return ValidateIntegrity(fullCheckString);
+        }
+
+        /// <summary>
+        /// Allows Subclasses to perform validation for Non IBAN, full domestic BBAN
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        protected virtual bool ValidateNonIBAN(string value) => false;
+
+        /// <summary>
+        /// Allows Subclasses to Perform validation on Domestic part of IBAN.
+        /// Value has already the alpha characters converted to numeric
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        protected virtual bool ValidateDomesticAccountNumber(string value) => true;
+
+        /// <summary>
+        /// Allows Subclasses to perform validation on the country part of IBAN
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        protected virtual bool ValidateCountry(string value) => true;
+
+        /// <summary>
+        /// Apply MOD 97-10 algorithm from ISO/IEC7064:2003
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        protected static bool ValidateIntegrity(string value)
+        {
+            var carryDigits = 0;
+            var lengthCount = 0;
+            uint mod = 0;
+            do
+            {
+                var take = Math.Min(9 - carryDigits, value.Length - lengthCount);
+                var subset = value.Substring(lengthCount, take);
+                var parsed = (uint)(mod * Math.Pow(10, take)) + uint.Parse(subset);
+                mod = parsed % 97;
+                carryDigits = 2;
+                lengthCount += take;
+            } while (lengthCount < value.Length);
+
+            return mod == 1;
+        }
+
+        /// <summary>
+        /// Delegate to be used for Replacing Alpha charaters into numerical values.
+        /// A - 10
+        /// B - 11
+        /// C - 12
+        /// D - 14
+        /// ....
+        /// Z - 35
+        /// </summary>
+        /// <param name="match"></param>
+        /// <returns></returns>
+        protected static string EvaluateAlphaReplace(Match match)
+        {
+            if (!match.Success)
+            {
+                return match.Value;
+            }
+
+            var value = match.Value[0] - 'A' + 10;
+            return value.ToString();
+        }
+
+        /// <summary>
+        /// At most an IBAN can't have more than 34 characters
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private static bool IsValid(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return false;
+            }
+
+            if (value.Length > 34)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Remove all non alpha-numeric values from the string
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private static string Sanitize(string value) => SanitizeRegEx.Replace(value, String.Empty);
     }
-
-    /// <summary>
-    /// Allows Subclasses to perform validation for Non IBAN, full domestic BBAN
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    protected virtual bool ValidateNonIBAN(string value) => false;
-
-    /// <summary>
-    /// Allows Subclasses to Perform validation on Domestic part of IBAN.
-    /// Value has already the alpha characters converted to numeric
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    protected virtual bool ValidateDomesticAccountNumber(string value) => true;
-
-    /// <summary>
-    /// Allows Subclasses to perform validation on the country part of IBAN
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    protected virtual bool ValidateCountry(string value) => true;
-
-    /// <summary>
-    /// Apply MOD 97-10 algorithm from ISO/IEC7064:2003
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    protected bool ValidateIntegrity(string value)
-    {
-      var carryDigits = 0;
-      var lengthCount = 0;
-      uint mod = 0;
-      do
-      {
-        var take = Math.Min(9 - carryDigits, value.Length - lengthCount);
-        var subset = value.Substring(lengthCount, take);
-        var parsed = (uint)(mod * Math.Pow(10, take)) + uint.Parse(subset);
-        mod = parsed % 97;
-        carryDigits = 2;
-        lengthCount += take;
-      } while (lengthCount < value.Length);
-
-      return mod == 1;
-    }
-
-    /// <summary>
-    /// Delegate to be used for Replacing Alpha charaters into numerical values.
-    /// A - 10
-    /// B - 11
-    /// C - 12
-    /// D - 14
-    /// ....
-    /// Z - 35
-    /// </summary>
-    /// <param name="match"></param>
-    /// <returns></returns>
-    protected static string EvaluateAlphaReplace(Match match)
-    {
-      if(!match.Success)
-      {
-        return match.Value;
-      }
-
-      var value = match.Value[0] - 'A' + 10;
-      return value.ToString();
-    }
-
-    /// <summary>
-    /// At most an IBAN can't have more than 34 characters
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    private bool IsValid(string value)
-    {
-      if(string.IsNullOrWhiteSpace(value))
-      {
-        return false;
-      }
-
-      if(value.Length > 34)
-      {
-        return false;
-      }
-
-      return true;
-    }
-
-    /// <summary>
-    /// Remove all non alpha-numeric values from the string
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    private string Sanitize(string value) => SanitizeRegEx.Replace(value, String.Empty);
-  }
 }

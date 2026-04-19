@@ -8,6 +8,7 @@
 	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DocumentNumber.Portugal.Nif.Generator\DocumentNumber.Portugal.Nif.Generator.csproj" />
+    <ProjectReference Include="..\DocumentNumber.Portugal.Vat.Validator\DocumentNumber.Portugal.Vat.Validator.csproj" />
     <ProjectReference Include="..\DocumentNumber.ValidatorAbstractions\DocumentNumber.ValidatorAbstractions.csproj" />
   </ItemGroup>
 </Project>
