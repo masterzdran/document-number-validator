@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\DocumentNumber.Spain.Vat.Generator\DocumentNumber.Spain.Vat.Generator.csproj" />
+		<ProjectReference Include="..\..\src\DocumentNumber.Spain.Vat.Validator\DocumentNumber.Spain.Vat.Validator.csproj" />
+	</ItemGroup>
+</Project>

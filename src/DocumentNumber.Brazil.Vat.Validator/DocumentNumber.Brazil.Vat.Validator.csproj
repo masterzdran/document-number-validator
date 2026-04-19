@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>DocumentNumber.Brazil.Vat.Validator</AssemblyName>
+		<PackageId>DocumentNumber.Brazil.Vat.Validator</PackageId>
+		<Title>DocumentNumber.Brazil.Vat.Validator</Title>
+		<Description>A library that validates if the VAT (tax payer id) is valid or not.</Description>
+		<PackageTags>Document Number Validation</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DocumentNumber.ValidatorAbstractions\DocumentNumber.ValidatorAbstractions.csproj" />
+		<ProjectReference Include="..\DocumentNumber.Brazil.Vat.Generator\DocumentNumber.Brazil.Vat.Generator.csproj" />
+	</ItemGroup>
+</Project>

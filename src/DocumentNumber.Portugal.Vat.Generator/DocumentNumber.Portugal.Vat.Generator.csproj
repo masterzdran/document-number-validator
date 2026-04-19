@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AssemblyName>DocumentNumber.Portugal.Vat.Generator</AssemblyName>
+		<PackageId>DocumentNumber.Portugal.Vat.Generator</PackageId>
+		<Title>DocumentNumber.Portugal.Vat.Generator</Title>
+		<Description>A library that generates a valid VAT (tax payer id) for testing purposes.</Description>
+		<PackageTags>Document Number Validation</PackageTags>
+	</PropertyGroup>
+
+</Project>

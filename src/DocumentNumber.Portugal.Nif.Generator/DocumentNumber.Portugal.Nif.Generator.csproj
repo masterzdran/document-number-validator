@@ -8,4 +8,8 @@
     <PackageTags>Document Number Validation</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DocumentNumber.Portugal.Vat.Generator\DocumentNumber.Portugal.Vat.Generator.csproj" />
+  </ItemGroup>
+
 </Project>

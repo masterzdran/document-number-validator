@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <PropertyGroup>
-    <PackageVersion>1.6.0</PackageVersion>
-    <Authors>Nuno Cancelo,João Matos Silva</Authors>
-    <PackageIcon>cards.64.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <PackageProjectUrl>https://github.com/masterzdran/document-number-validator</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/masterzdran/document-number-validator</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryBranch>main</RepositoryBranch>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <IsPackable>true</IsPackable>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="../../images/cards.64.png" Pack="true" PackagePath="\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="../../README.md" Pack="true" PackagePath="\"/>
-  </ItemGroup>
+	<PropertyGroup>
+		<PackageVersion>1.7.0</PackageVersion>
+		<Authors>Nuno Cancelo,João Matos Silva</Authors>
+		<PackageIcon>cards.64.png</PackageIcon>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/masterzdran/document-number-validator</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/masterzdran/document-number-validator</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryBranch>main</RepositoryBranch>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<IsPackable>true</IsPackable>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="../../images/cards.64.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="../../README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 </Project>
