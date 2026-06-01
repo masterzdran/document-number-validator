@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
+using DocumentNumber.InternationalBankAccountNumber.Validator.IBANConfig;
 
 namespace DocumentNumber.InternationalBankAccountNumber.Validator
 {
@@ -8,6 +11,7 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     protected static readonly Regex SanitizeRegEx = new Regex("[^A-Z0-9]+");
     protected static readonly Regex IBANStructure = new Regex("^([A-Z]{2}[0-9]{2})([A-Z0-9]+)");
     protected static readonly Regex AlphaCharacters = new Regex("([A-Z])");
+   
 
     public bool Validate(string value)
     {
@@ -28,7 +32,8 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
         return ValidateNonIBAN(sanitizedValue);
       }
 
-      var countryPart = ibanMatch.Groups[1].Value;
+      string countryPart = ibanMatch.Groups[1].Value;
+      ValidateIBANLength(countryPart, sanitizedValue);
       if (!ValidateCountry(countryPart))
       {
         return false;
@@ -46,7 +51,21 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
 
       return ValidateIntegrity(fullCheckString);
     }
-
+    /// <summary>
+    /// Validates the length of the provided IBAN against the expected length for the country code as defined in the configuration file.
+    /// </summary>
+    /// <param name="countryPart">The country code part of the IBAN.</param>
+    /// <param name="iban">The full IBAN to validate.</param>
+    /// <exception cref="ArgumentOutOfRangeException">Throws an exception if the IBAN length is invalid for the country code.</exception>
+    /// <exception cref="NullReferenceException">Throws an exception if the country code is not supported or does not exist in the configuration.</exception>
+    private void ValidateIBANLength(string countryPart,string iban)
+    {
+      int? expectedLength = IBANConfigHelper.IBANConfig.Countries.FirstOrDefault(country=>country.Code == countryPart).Length;
+      if(expectedLength == null)
+        throw new NullReferenceException($"The provided country code {countryPart} is not supported or does not exist in the configuration.");
+      if (iban.Length != expectedLength )
+        throw new ArgumentOutOfRangeException($"The provided IBAN has an invalid length for the country code {countryPart}. Expected length: {expectedLength}, Actual length: {iban.Length}");
+    }
     /// <summary>
     /// Allows Subclasses to perform validation for Non IBAN, full domestic BBAN
     /// </summary>

@@ -12,6 +12,12 @@
     <ProjectReference Include="..\DocumentNumber.ValidatorAbstractions\DocumentNumber.ValidatorAbstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="iban-lengths.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 
 
 </Project>
