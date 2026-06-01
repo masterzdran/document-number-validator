@@ -33,7 +33,8 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
       }
 
       string countryPart = ibanMatch.Groups[1].Value;
-      ValidateIBANLength(countryPart, sanitizedValue);
+      if(!ValidateIBANLength(countryPart, sanitizedValue))
+        return false;
       if (!ValidateCountry(countryPart))
       {
         return false;
@@ -58,13 +59,14 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     /// <param name="iban">The full IBAN to validate.</param>
     /// <exception cref="ArgumentOutOfRangeException">Throws an exception if the IBAN length is invalid for the country code.</exception>
     /// <exception cref="NullReferenceException">Throws an exception if the country code is not supported or does not exist in the configuration.</exception>
-    private void ValidateIBANLength(string countryPart,string iban)
+    private bool ValidateIBANLength(string countryPart,string iban)
     {
       int? expectedLength = IBANConfigHelper.IBANConfig.Countries.FirstOrDefault(country=>country.Code == countryPart).Length;
       if(expectedLength == null)
         throw new NullReferenceException($"The provided country code {countryPart} is not supported or does not exist in the configuration.");
       if (iban.Length != expectedLength )
         throw new ArgumentOutOfRangeException($"The provided IBAN has an invalid length for the country code {countryPart}. Expected length: {expectedLength}, Actual length: {iban.Length}");
+      return true;
     }
     /// <summary>
     /// Allows Subclasses to perform validation for Non IBAN, full domestic BBAN
