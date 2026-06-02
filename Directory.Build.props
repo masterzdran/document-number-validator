@@ -12,6 +12,27 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<IsPackable>true</IsPackable>
+
+				<!-- Reproducible build and Source Link settings -->
+				<!-- Ensure compiler produces deterministic output for DLL/EXE -->
+				<Deterministic>true</Deterministic>
+				<!-- Mark build as CI so SourceLink and other SDK features include commit info where available -->
+				<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+				<!-- Include repository URL in NuGet metadata and enable SourceLink generation when configured -->
+				<PublishRepositoryUrl>true</PublishRepositoryUrl>
+				<!-- Embed untracked sources so builds are more reproducible when SourceLink isn't available -->
+				<EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+				<!-- Symbols and source package configuration -->
+				<IncludeSymbols>true</IncludeSymbols>
+				<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+				<!-- Helper flag used by some SourceLink implementations; harmless if not present -->
+				<SourceLinkCreate>true</SourceLinkCreate>
+
+				<!-- Repository metadata to be included in the package. CI or git tooling can populate RepositoryCommit at build time. -->
+				<!-- If your CI provides a commit id, set RepositoryCommit to that value (for example: $(Build.SourceVersion) or from Nerdbank.GitVersioning) -->
+				<RepositoryCommit>$(RepositoryCommit)</RepositoryCommit>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="../../images/cards.64.png" Pack="true" PackagePath="\" />
