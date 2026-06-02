@@ -19,9 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6D81C1D7-6538-46DB-A36C-ACDC0775A365}"
-	ProjectSection(SolutionItems) = preProject
-		src\Directory.Build.props = src\Directory.Build.props
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C097DE10-B80A-4DFF-8E86-869F99876ECF}"
 	ProjectSection(SolutionItems) = preProject
@@ -155,6 +152,17 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.Brazil.Vat.Validator", "src\DocumentNumber.Brazil.Vat.Validator\DocumentNumber.Brazil.Vat.Validator.csproj", "{BB71F9C5-B39E-2BB0-BC87-21FCA1444929}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentNumber.France.Vat.Validator.Tests", "tests\DocumentNumber.France.Vat.Validator.Tests\DocumentNumber.France.Vat.Validator.Tests.csproj", "{CC29C8F8-CEDF-9612-E130-65DD065FA2EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{92F3B97E-2BB3-4CD6-94C2-90F0BC287D52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{0903B3BA-7DEC-450E-8EF7-446FB29F5852}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-deploy-dependent-nugets.yml = .github\workflows\build-deploy-dependent-nugets.yml
+		.github\workflows\build-deploy-last-nugets.yml = .github\workflows\build-deploy-last-nugets.yml
+		.github\workflows\build-deploy-nodependent-nugets.yml = .github\workflows\build-deploy-nodependent-nugets.yml
+		.github\workflows\build-deploy-nugets.yml = .github\workflows\build-deploy-nugets.yml
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -471,6 +479,7 @@ Global
 		{BF661CC5-61FE-E07C-CAD9-714CF01760CF} = {392712F8-3BA5-4729-9E92-2733AFA4853C}
 		{BB71F9C5-B39E-2BB0-BC87-21FCA1444929} = {4C46E5A4-0178-4311-94FE-D78C76D831EE}
 		{CC29C8F8-CEDF-9612-E130-65DD065FA2EF} = {6389AFCF-ACDB-4955-BB8C-FC68256D28DA}
+		{0903B3BA-7DEC-450E-8EF7-446FB29F5852} = {92F3B97E-2BB3-4CD6-94C2-90F0BC287D52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9033BEB-EFFA-4BA9-97C4-7344F3BA4E9A}
