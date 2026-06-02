@@ -70,9 +70,8 @@ Check the unit tests projects, under /tests/ for usage,
 # Contributors
 * [@masterzdran](https://github.com/masterzdran)
 * [@joaomatossilva](https://github.com/joaomatossilva)
-   * Portugal NIB Validator
-   * International Bank Account Number (IBAN) Validator
-
+* [@MarcoEnxuto](https://github.com/MarcoEnxuto)
 
 # Attribution 
 Icons made by [Pixel perfect](https://icon54.com/) from [www.flaticon.com](https://www.flaticon.com/)
+
