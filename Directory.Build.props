@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
 	<PropertyGroup>
-		<PackageVersion>1.7.0</PackageVersion>
-		<Authors>Nuno Cancelo,João Matos Silva</Authors>
+		<PackageVersion>1.7.1</PackageVersion>
+		<Authors>Nuno Cancelo,João Matos Silva, Marco Enxuto</Authors>
 		<PackageIcon>cards.64.png</PackageIcon>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/masterzdran/document-number-validator</PackageProjectUrl>
