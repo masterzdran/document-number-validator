@@ -11,31 +11,31 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     protected static readonly Regex SanitizeRegEx = new Regex("[^A-Z0-9]+");
     protected static readonly Regex IBANStructure = new Regex("^([A-Z]{2}[0-9]{2})([A-Z0-9]+)");
     protected static readonly Regex AlphaCharacters = new Regex("([A-Z])");
-   
+
 
     public bool Validate(string value)
     {
-      if(String.IsNullOrEmpty(value))
+      if (String.IsNullOrEmpty(value))
       {
         return false;
       }
 
       var sanitizedValue = Sanitize(value);
-      if(!IsValid(sanitizedValue))
+      if (!IsValid(sanitizedValue))
       {
         return ValidateNonIBAN(sanitizedValue);
       }
 
       var ibanMatch = IBANStructure.Match(sanitizedValue);
-      if(!ibanMatch.Success)
+      if (!ibanMatch.Success)
       {
         return ValidateNonIBAN(sanitizedValue);
       }
 
       string countryPart = ibanMatch.Groups[1].Value;
-      if(!ValidateIBANLength(countryPart, sanitizedValue.Length))
+      if (!ValidateIBANLength(countryPart.Substring(0, 2), sanitizedValue.Length))
         return false;
-      if (!ValidateCountry(countryPart))
+      if (!ValidateCountry(countryPart.Substring(0, 2)))
       {
         return false;
       }
@@ -59,14 +59,11 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     /// <param name="ibanLength">The length of the full IBAN to validate.</param>
     /// <exception cref="ArgumentOutOfRangeException">Throws an exception if the IBAN length is invalid for the country code.</exception>
     /// <exception cref="NullReferenceException">Throws an exception if the country code is not supported or does not exist in the configuration.</exception>
-    private static bool ValidateIBANLength(string countryPart,int ibanLength)
+    private static bool ValidateIBANLength(string countryPart, int ibanLength)
     {
-        IBANConfigHelper.LoadConfig();
-        int? expectedLength = IBANConfigHelper.IBANConfig.Countries.FirstOrDefault(country=>country.Code == countryPart).Length;
-        if (expectedLength == null || ibanLength != expectedLength)
-            return false;
-        else
-            return true;
+      IBANConfigHelper.LoadConfig();
+      int expectedLength = IBANConfigHelper.IBANConfig.Countries.FirstOrDefault(country => country.Code == countryPart)?.Length ?? 0;
+      return !(expectedLength == 0 || ibanLength != expectedLength);
     }
     /// <summary>
     /// Allows Subclasses to perform validation for Non IBAN, full domestic BBAN
@@ -126,7 +123,7 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     /// <returns></returns>
     protected static string EvaluateAlphaReplace(Match match)
     {
-      if(!match.Success)
+      if (!match.Success)
       {
         return match.Value;
       }
@@ -142,12 +139,12 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     /// <returns></returns>
     private bool IsValid(string value)
     {
-      if(string.IsNullOrWhiteSpace(value))
+      if (string.IsNullOrWhiteSpace(value))
       {
         return false;
       }
 
-      if(value.Length > 34)
+      if (value.Length > 34)
       {
         return false;
       }
