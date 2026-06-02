@@ -4,8 +4,8 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator.IBANConfig
   internal sealed class CountryConfig
   {
     [JsonPropertyName("code")]
-    internal string Code { get; set; }
+    public string Code { get; set; }
     [JsonPropertyName("length")]
-    internal int Length { get; set; }
+    public int Length { get; set; }
   }
 }

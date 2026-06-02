@@ -51,6 +51,34 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
       result.ShouldBeFalse();
     }
 
+    [Theory(DisplayName = "IBAN Should be Invalid For unsupported country code.")]
+    [InlineData("ZZ00 1234 5678 9012 3456 7890 12")]
+    public void IBAN_Should_be_Invalid_For_Unsupported_Country_Code(string value)
+    {
+      // Arrange
+      var validator = new InternationalBankAccountNumberValidator();
+
+      // Act
+      var result = validator.Validate(value);
+
+      // Assert
+      result.ShouldBeFalse();
+    }
+
+    [Theory(DisplayName = "IBAN Should be Invalid For wrong country-specific length.")]
+    [InlineData("PT50 1234 4321 1234 5678 9017")]
+    public void IBAN_Should_be_Invalid_For_Wrong_Country_Specific_Length(string value)
+    {
+      // Arrange
+      var validator = new InternationalBankAccountNumberValidator();
+
+      // Act
+      var result = validator.Validate(value);
+
+      // Assert
+      result.ShouldBeFalse();
+    }
+
     [Theory(DisplayName = "IBAN Should be Valid For Valid values.")]
     [InlineData("PT50123443211234567890172")]
     [InlineData("PT50000100001234567890194")]
