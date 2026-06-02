@@ -13,6 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="iban-lengths.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DocumentNumber.ValidatorAbstractions\DocumentNumber.ValidatorAbstractions.csproj" />
   </ItemGroup>
 
