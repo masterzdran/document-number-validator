@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <None Include="iban-lengths.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

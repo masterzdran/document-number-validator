@@ -157,11 +157,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{92F3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{0903B3BA-7DEC-450E-8EF7-446FB29F5852}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\build-deploy-dependent-nugets.yml = .github\workflows\build-deploy-dependent-nugets.yml
-		.github\workflows\build-deploy-last-nugets.yml = .github\workflows\build-deploy-last-nugets.yml
-		.github\workflows\build-deploy-nodependent-nugets.yml = .github\workflows\build-deploy-nodependent-nugets.yml
 		.github\workflows\build-deploy-nugets.yml = .github\workflows\build-deploy-nugets.yml
-		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 	EndProjectSection
 EndProject
 Global
