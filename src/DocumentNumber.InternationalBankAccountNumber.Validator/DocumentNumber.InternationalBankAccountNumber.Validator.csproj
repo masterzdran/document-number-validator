@@ -13,9 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="iban-lengths.json">
+    <Content Include="iban-lengths.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+		<Pack>true</Pack>
+		<PackagePath>contentFiles\any\any\</PackagePath>
+		<PackageCopyToOutput>true</PackageCopyToOutput>
+		<PackageFlatten>true</PackageFlatten>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
