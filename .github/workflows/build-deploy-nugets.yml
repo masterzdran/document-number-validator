@@ -68,4 +68,6 @@ jobs:
           name: nuget-packages
           path: './dist'
       - name: Publish nuget.org
-        run: dotnet nuget push dist/*.nupkg --api-key ${{secrets.NUGET_ORG_TOKEN}} --source https://api.nuget.org/v3/index.json
+        run: |
+          dotnet nuget push "dist/*.nupkg" --api-key ${{ secrets.NUGET_ORG_TOKEN }} --source https://api.nuget.org/v3/index.json || true
+          dotnet nuget push "dist/*.snupkg" --api-key ${{ secrets.NUGET_ORG_TOKEN }} --source https://api.nuget.org/v3/index.json || true

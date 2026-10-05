@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.2] - 2026-06-04
+### Fixed
+- DocumentNumber.InternationalBankAccountNumber - Update IBAN JSON to always copy to output directory  
+
+
 ## [1.7.1] - 2026-06-02
 ### Fixed
 - DocumentNumber.InternationalBankAccountNumber - Fixed incorrect check digit calculation for certain IBANs, which could lead to false negatives in validation.
