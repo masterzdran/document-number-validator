@@ -61,7 +61,6 @@ namespace DocumentNumber.InternationalBankAccountNumber.Validator
     /// <exception cref="NullReferenceException">Throws an exception if the country code is not supported or does not exist in the configuration.</exception>
     private static bool ValidateIBANLength(string countryPart, int ibanLength)
     {
-      IBANConfigHelper.LoadConfig();
       int expectedLength = IBANConfigHelper.IBANConfig.Countries.FirstOrDefault(country => country.Code == countryPart)?.Length ?? 0;
       return !(expectedLength == 0 || ibanLength != expectedLength);
     }
