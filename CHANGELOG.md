@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.3] - 2026-10-07
+### Fixed
+- DocumentNumber.InternationalBankAccountNumber - Ensure the IBAN country length configuration file is included in the build output so IBAN country validation works correctly at runtime.
+- DocumentNumber.InternationalBankAccountNumber - Validate IBAN country codes and expected lengths using the bundled country configuration data.
+
 ## [1.7.2] - 2026-06-04
 ### Fixed
 - DocumentNumber.InternationalBankAccountNumber - Update IBAN JSON to always copy to output directory  
